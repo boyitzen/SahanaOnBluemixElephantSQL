@@ -1,0 +1,24 @@
+python-dateutil>=1.5,!=2.0 #dateutil
+lxml>=2.2.8
+wheel==0.24.0
+reportlab>=3.2
+shapely>=1.5
+TwitterSearch
+ansible
+boto
+xlwt
+tweepy
+PyYAML
+selenium
+pyserial
+xlrd
+sunburnt
+numpy
+#GDAL
+matplotlib
+rtfw
+#PyRTF
+pyth
+requests-facebook
+pillow>=2.4.0
+pydal
