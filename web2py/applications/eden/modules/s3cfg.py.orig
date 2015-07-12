@@ -44,10 +44,6 @@ from gluon.storage import Storage
 
 from s3theme import *
 
-import os
-import json
-import urlparse
-
 class S3Config(Storage):
     """
         Deployment Settings Helper Class
@@ -850,9 +846,6 @@ class S3Config(Storage):
                          db_get("host", "localhost"),
                          db_get("port") or "5432",
                          db_get("database", "sahana"))
-            elephantsql_service = json.loads(os.environ['VCAP_SERVICES'])['elephantsql'][0]
-            db_credentials = elephantsql_service['credentials'] 
-            db_string = db_credentials['uri'] 
         else:
             from gluon import HTTP
             raise HTTP(501, body="Database type '%s' not recognised - please correct file models/000_config.py." % db_type)
