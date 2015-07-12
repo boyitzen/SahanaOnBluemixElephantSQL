@@ -2,7 +2,7 @@
 
 function usage
 {
-	echo "\nUsage: $1 <bluemix app name> <ElephantSQL service name> <Full path to web2py>\n"
+	echo -e "\nUsage: $1 <bluemix app name> <ElephantSQL service name> <Full path to web2py>\n"
 	exit;
 }
 
@@ -10,6 +10,9 @@ function usage
 APP_NAME=$1
 DB_SERVICE_NAME=$2
 WEB2PY_PATH=$3
+
+echo -e "Please first run 'cf login -a https://api.ng.bluemix.net -u <bluemix id> -s <space name> -p <password>'\n"
+
 
 if [ -z "$APP_NAME" -o -z "$DB_SERVICE_NAME" -o -z "$WEB2PY_PATH" ]; then
 	usage $(basename $0);
